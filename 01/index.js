@@ -1,35 +1,45 @@
 'use strict';
 
 const data = [
-  {
-    name: "Adam",
-    age: 28,
-    group: "Sem I / Group B"
-  },
-  {
-    name: "Roman",
-    age: 30,
-    group: "Sem III / Group C"
-  },
-  {
-    name: "Ania",
-    age: 27,
-    group: "Sem I / Group A"
-  },
-  {
-    name: "Karol",
-    age: 31,
-    group: "Sem IV / Group A"
-  },
+    {
+        name: "Adam",
+        age: 28,
+        group: "Sem I / Group B"
+    },
+    {
+        name: "Roman",
+        age: 30,
+        group: "Sem III / Group C"
+    },
+    {
+        name: "Ania",
+        age: 27,
+        group: "Sem I / Group A"
+    },
+    {
+        name: "Karol",
+        age: 31,
+        group: "Sem IV / Group A"
+    },
 ];
 
 const Users = () => {
-  return (
-    <div>
-      <h1>Map users from data array</h1>
-    </div>
-  );
+    return (
+        <div>
+            <h1>Users</h1>
+            {data.map(person => {
+                return (
+                    <div>
+                        <p>{person.name}</p>
+                        <p>{person.age}</p>
+                        <p>{person.group}</p>
+                    </div>
+                )
+            })}
+        </div>
+    )
 };
+
 
 const appContainer = document.querySelector('#app');
 
