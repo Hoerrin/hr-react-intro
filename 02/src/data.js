@@ -1,7 +1,7 @@
 export const data = [
   {
     name: 'Adam',
-    age: 28,
+    age: 40,
   },
   {
     name: 'Ania',

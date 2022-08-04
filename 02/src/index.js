@@ -1,6 +1,15 @@
-import { data } from './data.js';
-import { combineAge, renderAge } from './helpers.js';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { data } from './data';
 
-console.log(combineAge(data));
-const container = document.querySelector('#age');
-renderAge(container, data);
+const App = () => {
+    return (
+        <div>
+            {data.map(({name, age}) => (
+                <p key={name}>{name}, {age}</p>
+            ))}
+        </div>
+    )
+}
+
+ReactDOM.createRoot(document.getElementById('app')).render(<App/>)
